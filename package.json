@@ -1,0 +1,25 @@
+{
+  "name": "mdarticleparse",
+  "version": "1.0.0",
+  "description": "markdown article parse for rainboy ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlogProject/mdArticleParse.git"
+  },
+  "keywords": [
+    "markdown"
+  ],
+  "author": "rainboy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlogProject/mdArticleParse/issues"
+  },
+  "homepage": "https://github.com/BlogProject/mdArticleParse#readme",
+  "dependencies": {
+    "md5": "^2.2.1"
+  }
+}
