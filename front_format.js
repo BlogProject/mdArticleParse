@@ -35,27 +35,28 @@ function parse(str,options){
     var raw = splitData.data;
     
     /* 如果没有信息头,直接返回 */
-    if (!raw) return {content: str};
+    if (!raw) return {content: str,noheader:true};
 
     var data = parseYAML(raw, options);
-    if( data.tags ==null || data.tags == undefined)
-      data.tags = []
+    //if( data.tags ==null || data.tags == undefined)
+      //data.tags = []
     
-    if (!data) return {content: str};
+    if (!data) return {content: str,noheader:true};
 
     /* 把时间  字符串 转换成 时间对象  */
     
-    if(!data.date)
-        data.date = new Date();
-    else
-        if(typeof(data.date) === "string" )
-            data.date = myDate(data.date);
+    //if(!data.date)
+        //data.date = new Date();
+    //else
+        //if(typeof(data.date) === "string" )
+            //data.date = myDate(data.date);
 
-    if(!data.update)
-        data.update = Date.now();
-    else
-        if(typeof(data.update) === "string" )
-            data.update = myDate(data.update);
+    //if(!data.update)
+        //data.update = Date.now();
+    //else
+        //if(typeof(data.update) === "string" )
+            //data.update = myDate(data.update);
+  
     data.content = splitData.content.replace(/<!--more-->/,'');
 
     let __content = splitData.content;
